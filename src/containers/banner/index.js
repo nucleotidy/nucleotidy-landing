@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { useStaticQuery, graphql } from "gatsby";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 import Button from '../../components/button';
 import { Titlespan, Description } from '../../components/title/index';
 import Image from '../../components/image/index';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { paperPlane, mapMarker, envelopeOpen, volumeControlPhone, facebookSquare, twitterSquare, linkedinSquare } from 'react-icons-kit/fa'
+import { paperPlane, mapMarker, envelopeOpen, volumeControlPhone, facebookSquare, twitterSquare} from 'react-icons-kit/fa'
 import { Title, Description } from '../../components/title/index';
 import PreviewIcon from '../../components/icon/index';
 import Image from '../../components/image/index';
@@ -20,7 +20,7 @@ function Footer() {
                                 <Image Path={logo} Class="footer-logo" />
                                 <Description
                                     Class="footer-dec"
-                                    Name="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown"
+                                    Name="Meet Nucleotidy, the sleek and collaborative platform for geneticists. It helps you organize your sequence data as neatly as it was when it still resided within a cell."
                                 />
                             </div>
                         </Col>
@@ -121,7 +121,7 @@ function Footer() {
                         </Col>
                         <Col lg={3} sm={6}>
                             <div className="footer-newsletter">
-                                <Title Class="footer-title" Name="Stay with us" />
+                                <Title Class="footer-title" Name="Have messages delivered to you like a ribosome" />
                                 <div className="form-group">
                                     <InputBox
                                         Type="text"
