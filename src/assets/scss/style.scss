@@ -212,7 +212,7 @@ header {
   left: 0;
   top: 0;
   z-index: 70;
-  padding-top: 31px;
+  padding-top: 50px;
   transition: all 0.5s ease-in-out;
   &.header-sticky {
     &.sticky {
@@ -220,7 +220,7 @@ header {
       transition: all 0.5s ease-in-out;
       .logo-wrapper {
         a {
-          height: 60px;
+          height: 70px;
           transition: all 0.5s ease-in-out;
         }
       }

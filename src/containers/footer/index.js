@@ -125,7 +125,7 @@ function Footer() {
                                 <div className="form-group">
                                     <InputBox
                                         Type="text"
-                                        PlaceHolder="Enter email"
+                                        PlaceHolder="Enter email to sign up for our newsletter"
                                         Class="input-search"
                                     />
                                     <span className="search-icon gradient-color">

@@ -31,7 +31,7 @@ const IndexPage = () => {
             <div className="main-wrapper">
                 <Navbar />
                 <div id="main-content">
-                    <Banner ChangeClass={'demo1'} />
+                    <Banner ChangeClass={'demo3'} />
                     <Service />
                     <About />
                     <Blog />
@@ -49,7 +49,7 @@ const IndexPage = () => {
             :
 
             <div className="theme-loader">
-                <RingSpinner size={80} color="#e100ff" loading={!loader} />
+                <RingSpinner size={80} color="linear-gradient(to right, #073a4d  0%, #2a4151 100%)" loading={!loader} />
 
             </div>
     )

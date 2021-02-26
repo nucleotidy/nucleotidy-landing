@@ -1,5 +1,5 @@
 @import "../../assets/scss/variable.scss";
-
+@import "../../assets/scss/colors/nucleotidycolors.scss";
 /* bottom-to-top button css start */
 
 #bottom-to-top {
@@ -18,7 +18,9 @@
   .scroll-icon-link {
     width: 44px;
     height: 44px;
-    border-radius: 5px;
+    border-bottom: 4px solid;
+    border-color: $primary1;
+    box-shadow: 0 4px 9px 0 rgba(20, 20, 20, 0.4), 0 6px 5px 0 rgba(40, 40, 40, 0.1);
     line-height: 44px;
     text-align: center;
     display: flex;

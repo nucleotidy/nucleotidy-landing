@@ -9,9 +9,6 @@ function CopyRight() {
             <Container>
                 <div className="footer-copyright-text">
                     <div className="copyright-link">
-                        <span>© Copyright 2019 busines. All Rights Reserved</span>
-
-                        <span> Term & Condition / Privacy & Policy</span>
                     </div>
                     <Scroll />
                 </div>
@@ -21,4 +18,3 @@ function CopyRight() {
 }
 
 export default CopyRight;
-
