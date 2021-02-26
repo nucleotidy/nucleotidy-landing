@@ -13,6 +13,7 @@ import './navbar.scss';
 function Navbar() {
     const [activeClass, setactiveClass] = useState(false);
     const [searchValue, setSearch] = useState(false);
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.addEventListener('scroll', () => {
@@ -37,10 +38,10 @@ function Navbar() {
                 <Container>
                     <Row>
                         <Col sm={6} className="left-block">
-                            <div className="logo-wrapper">
-                                <a href="/">
-                                    <Image Path={logo} Class="logo-img" />
-                                </a>
+                            <div className={` ${activeClass ? 'showLogo' : 'hideLogo'}`}>
+                              <a href="/">
+                                  <Image Path={logo} className="logo-img" />
+                              </a>
                             </div>
                         </Col>
                         <Col sm={6} className="right-block">
