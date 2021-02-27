@@ -4,7 +4,8 @@ import { Subtitle, Description, Title, Titlespan2 } from '../../components/title
 import Button from '../../components/button';
 import { Servicedata, Servicedata1 } from '../../data/service/index';
 import PreviewIcon from '../../components/icon';
-import '../service/service.scss';
+
+import './service.scss';
 
 function Service() {
     return (

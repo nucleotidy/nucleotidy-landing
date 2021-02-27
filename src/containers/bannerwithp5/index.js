@@ -1,14 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-//import { useStaticQuery, graphql } from "gatsby";
-// import { gsap } from "gsap";
 import Button from '../../components/button';
 import { Titlespan, Description } from '../../components/title/index';
 import Image from '../../components/image/index';
 import BannerImg1 from '../../assets/images/banner/bannerimg.png';
-//import BannerImg1 from '../../assets/images/chimera/nucleosome/nucleosomeD.png';
-import Shape2 from '../../assets/images/banner/bg-wave.svg';
-import Shape3 from '../../assets/images/banner/wave.png';
+import P5Wrapper from 'react-p5-wrapper';
+import sketch from '../../assets/animations/p5/bannerbases.js';
 import './banner.scss';
 // import './animations.scss';
 
@@ -54,15 +51,7 @@ function Banner(props) {
                         </Col>
                     </Row>
                 </Container>
-
-                {(props.ChangeClass === 'demo2' || props.ChangeClass === 'demo3') &&
-                    <div className="bottom-img">
-                        {props.ChangeClass === 'demo2' ?
-                            <Image Path={Shape2} /> :
-                            <Image Path={Shape3} />
-                        }
-                    </div>
-                }
+                <P5Wrapper sketch={sketch} />
             </div>
         </section>
     );

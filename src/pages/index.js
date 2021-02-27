@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { RingSpinner } from "react-spinners-kit";
 import Navbar from '../containers/navbar'
 import Banner from "../containers/banner"
+//import Mission from "../containers/mission"
 import Service from "../containers/service"
 import About from "../containers/about"
 import Blog from "../containers/blog"
