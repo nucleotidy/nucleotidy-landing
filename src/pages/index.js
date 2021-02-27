@@ -31,7 +31,7 @@ const IndexPage = () => {
             <div className="main-wrapper">
                 <Navbar />
                 <div id="main-content">
-                    <Banner ChangeClass={'demo3'} />
+                    <Banner ChangeClass={'demo1'} />
                     <Service />
                     <About />
                     <Blog />

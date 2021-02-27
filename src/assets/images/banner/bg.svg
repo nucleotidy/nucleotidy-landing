@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -181,13 +181,13 @@
      inkscape:window-height="997"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="0.24656155"
-     inkscape:cx="1755.1839"
-     inkscape:cy="507.59745"
+     inkscape:zoom="0.39006808"
+     inkscape:cx="918.79144"
+     inkscape:cy="646.03482"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g2111" />
+     inkscape:current-layer="svg2" />
   <rect
      style="opacity:1;vector-effect:none;fill:#073a4d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:10.54463959;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
      id="rect1990"
@@ -199,20 +199,20 @@
      ry="1.4410683" />
   <g
      id="g2111"
-     transform="matrix(1.8033207,0,0,1.7886115,-1248.098,-869.86859)">
+     transform="matrix(1.8033207,0,0,2.6365705,-1248.098,-1260.1784)">
     <path
        inkscape:connector-curvature="0"
        transform="matrix(0.88544789,0,0,0.66404872,528.17598,902.3092)"
        sodipodi:nodetypes="cccccccccccccc"
        id="path4822"
        d="m 187.94447,-515.73515 c 0,0.69879 0,1.39758 0,2.09637 119.56558,3.24911 238.91425,11.93736 357.0816,26.58047 112.8224,14.0103 224.60334,33.4306 333.98332,59.23243 89.86102,21.23211 178.13961,46.76574 263.33091,77.63295 62.7159,22.74679 123.7584,48.38931 181.9452,77.61075 25.111,12.61213 49.7639,25.85616 73.6245,39.8736 0,-3.91168 0.055,-7.59317 -0.073,-11.48644 -55.964,-31.63687 -115.3801,-59.45164 -176.7549,-84.16777 -71.5036,-28.77588 -145.6968,-53.36814 -221.39677,-74.55574 -94.80725,-26.5116 -192.00992,-47.67674 -290.3882,-64.38054 -111.76914,-18.94373 -225.09995,-32.10781 -338.98874,-40.13914 -60.65924,-4.26963 -121.48571,-7.07602 -182.36392,-8.46839 0,0.0571 0,0.1143 0,0.17145 z"
-       style="fill:url(#linearGradient5879);fill-opacity:1.0;filter:url(#filter5945)" />
+       style="fill:url(#linearGradient5879);fill-opacity:1;filter:url(#filter5945)" />
     <path
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccccccccccc"
        id="path4818"
        d="m 694.591,566.62446 c 0,0.45649 0,0.91306 0,1.36965 102.60742,1.87812 205.05652,7.14054 306.5743,16.09375 90.206,7.9676 179.6879,18.84054 267.6367,33.06325 74.4168,12.04235 147.752,26.48286 219.0982,43.78763 63.9107,15.5182 126.259,33.33521 185.7767,54.02038 31.6733,11.01483 62.5134,22.84469 92.2103,35.60896 0.1306,-2.55072 0.082,-4.92427 0.082,-7.42603 -51.5602,-21.34666 -106.334,-40.10274 -162.7803,-56.63797 -68.9617,-20.183 -140.5768,-37.17725 -213.6013,-51.6017 -88.3372,-17.4252 -178.7802,-31.08455 -270.2311,-41.57674 -109.0909,-12.49274 -219.63745,-20.47791 -330.57278,-24.43142 -31.37054,-1.11822 -62.7749,-1.90627 -94.19272,-2.38361 0,0.0379 0,0.0758 0,0.11385 z"
-       style="fill:url(#linearGradient5885);fill-opacity:1.0;stroke:none;stroke-width:1.0666666" />
+       style="fill:url(#linearGradient5885);fill-opacity:1;stroke:none;stroke-width:1.0666666" />
     <path
        inkscape:connector-curvature="0"
        transform="matrix(0.88544789,0,0,0.66404872,528.17598,902.3092)"
@@ -223,7 +223,7 @@
        inkscape:connector-curvature="0"
        transform="matrix(0.88544789,0,0,0.62864651,528.17598,884.15485)"
        sodipodi:nodetypes="cccccccccccccc"
-       style="fill:url(#linearGradient5895);fill-opacity:1.0;filter:url(#filter5961)"
+       style="fill:url(#linearGradient5895);fill-opacity:1;filter:url(#filter5961)"
        d="m 187.94447,-507.79955 c 0,0.43631 0,0.87262 0,1.30892 119.56558,2.02867 238.91425,7.4534 357.0816,16.5962 112.8224,8.74769 224.60334,20.87325 333.98332,36.98329 89.86102,13.25681 178.13961,29.19939 263.33091,48.47212 62.7159,14.20255 123.7584,30.2131 181.9452,48.45827 25.111,7.8747 41.99,13.54716 65.8506,22.29931 2.1627,-1.02498 4.8536,-3.81498 5.7502,-5.88378 -55.964,-19.75329 -113.43,-35.81144 -174.8048,-51.2436 -71.503,-17.96695 -145.6962,-33.32176 -221.39617,-46.55078 -94.80725,-16.5532 -192.00992,-29.7682 -290.3882,-40.19764 -111.76914,-11.828 -225.09995,-20.04734 -338.98874,-25.0619 -60.65924,-2.66585 -121.48571,-4.41809 -182.36392,-5.28746 0,0.0357 0,0.0714 0,0.10705 z"
        id="path5893" />
   </g>

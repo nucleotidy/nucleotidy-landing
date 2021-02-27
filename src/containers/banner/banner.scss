@@ -23,6 +23,7 @@ $bannerimg: var(--bannerimg);
     }
   }
 }
+
 .banner-wrapper {
   width: 100%;
   height: 100%;
@@ -41,13 +42,11 @@ $bannerimg: var(--bannerimg);
     margin-bottom: calc(10px + (27 - 10) * ((100vw - 320px) / (1920 - 320)));
     color: $color-white;
     font-weight: 700;
-    text-transform: uppercase;
   }
   .banner-dec {
-    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(18px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
-    color: $color-white;
-    margin-bottom: 33px;
+    margin-bottom: 53px;
   }
 }
 
