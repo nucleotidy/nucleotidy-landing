@@ -1,9 +1,11 @@
 @import "../../assets/scss/variable.scss";
 
 :root {
-  --bannerimg: url("../../assets/images/banner/bg.svg");
+  --bannerimg: url("../../assets/images/banner/bgp5.svg");
+  --bottomimg: url("../../assets/images/banner/bg-bottom2.svg");
 }
 $bannerimg: var(--bannerimg);
+$bottomimg: var(--bottomimg);
 
 .banner-wrapper {
   background-position: bottom;
@@ -19,7 +21,12 @@ $bannerimg: var(--bannerimg);
     position: absolute;
     top: 0px;
     // z-index: auto;
-     z-index: 0;
+    // z-index: 0; for position in front of text elements
+    z-index: -1;
+    border-bottom: 4px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #2c89a0 30%, #59a5d8 70%, #d4ff2a 85%, #bbf663 100%);
+    box-shadow: 0 4px 9px 0 rgba(20, 20, 20, 0.4), 0 6px 5px 0 rgba(40, 40, 40, 0.1);
   }
   .row {
     align-items: center;

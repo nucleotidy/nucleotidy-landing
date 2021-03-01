@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "Matthias Zepper",
   "dependencies": {
+    "@code-hike/mini-browser": "^0.2.1",
     "@fontsource/nunito": "^4.2.1",
     "@fontsource/open-sans": "^4.2.1",
     "bootstrap": "^4.4.1",

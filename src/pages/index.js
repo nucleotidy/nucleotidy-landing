@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import 'bootstrap/dist/css/bootstrap.css'
 import { RingSpinner } from "react-spinners-kit";
 import Navbar from '../containers/navbar'
-import Banner from "../containers/banner"
+import Banner from "../containers/bannerwithp5"
 //import Mission from "../containers/mission"
 import Service from "../containers/service"
 import About from "../containers/about"

@@ -5,9 +5,9 @@ import { Titlespan, Description } from '../../components/title/index';
 import Image from '../../components/image/index';
 import BannerImg1 from '../../assets/images/banner/bannerimg.png';
 import P5Wrapper from 'react-p5-wrapper';
-import sketch from '../../assets/animations/p5/bannerbases.js';
+import sketch from '../../assets/animations/p5/bluematrix.js';
 import './banner.scss';
-// import './animations.scss';
+import Wave from '../../assets/images/banner/bg-wave.svg';
 
 function Banner(props) {
 
