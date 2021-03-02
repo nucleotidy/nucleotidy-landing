@@ -2,10 +2,9 @@
 
 :root {
   --bannerimg: url("../../assets/images/banner/bgp5.svg");
-  --bottomimg: url("../../assets/images/banner/bg-bottom2.svg");
 }
+
 $bannerimg: var(--bannerimg);
-$bottomimg: var(--bottomimg);
 
 .banner-wrapper {
   background-position: bottom;
