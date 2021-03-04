@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { MiniBrowser } from "@code-hike/mini-browser"
 import Button from '../../components/button';
 import { Titlespan, Description } from '../../components/title/index';
 import Image from '../../components/image/index';
 import BannerImg1 from '../../assets/images/banner/bannerimg.png';
+import PreviewImg1 from '../../assets/images/banner/platformpreview.png';
 import P5Wrapper from 'react-p5-wrapper';
 import sketch from '../../assets/animations/p5/bluematrix.js';
 import './banner.scss';
@@ -15,7 +17,7 @@ function Banner(props) {
             <div className="banner-outer">
                 <Container>
                     <Row>
-                        <Col md={8}>
+                        <Col md={6}>
                             <div className="banner-content">
                                 <Titlespan
                                     Class="banner-main-title"
@@ -29,7 +31,7 @@ function Banner(props) {
                                 <div className="banner-btn-wrapper">
                                     <Button
                                         Class="button1 button3 btn"
-                                        Name="Our mission"
+                                        Name="Main features"
                                     />
                                     <Button
                                         Class="button1 button4 btn"
@@ -40,13 +42,28 @@ function Banner(props) {
                                 </div>
                             </div>
                         </Col>
-                        <Col md={4}>
-                            <div className="banner-image">
-                                <Image
-                                    Path={BannerImg1}
-                                    Class="banner-img"
-                                />
-                            </div>
+                        <Col md={6}>
+                          {props.BannerPreview === 'minibrowser' ?
+                              <MiniBrowser
+                                url="http://www.nucleotidy.bio"
+                                style={{ height: "100%", width: "100%" }}
+                                //children={browserSteps[state.currentIndex]}
+                              >
+                              <Image
+                                  Path={PreviewImg1}
+                                  Class="banner-img"
+                                  Title="Preview of the app"
+                                  Alt="A preview of the Nucleotidy app"
+                               />
+                            </MiniBrowser>
+                               :
+                              <div className="banner-image">
+                                  <Image
+                                      Path={BannerImg1}
+                                      Class="banner-img"
+                                  />
+                              </div>
+                          }
                         </Col>
                     </Row>
                 </Container>

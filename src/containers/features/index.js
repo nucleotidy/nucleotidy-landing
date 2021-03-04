@@ -2,18 +2,18 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { Subtitle, Description, Title, Titlespan2 } from '../../components/title/index';
 import Button from '../../components/button';
-import { Servicedata, Servicedata1 } from '../../data/service/index';
+import { Featuredata, Featuredata1 } from '../../data/features/index';
 import PreviewIcon from '../../components/icon';
 
-import './service.scss';
+import './features.scss';
 
-function Service() {
+function Features() {
     return (
-        <section className="service-wrapper" id="service">
+        <section className="features-wrapper" id="features">
             <Container>
                 <Row>
                     <Col lg={5} md={4}>
-                        <div className="service-content-1 main-title-wrapper">
+                        <div className="features-content-1 main-title-wrapper">
                             <Titlespan2
                                 Class="sitemain-subtitle"
                                 Name="Business"
@@ -24,11 +24,11 @@ function Service() {
                                 Name="We Provide The"
                             />
                             <Title
-                                Class="service-title"
+                                Class="features-title"
                                 Name="Our core features"
                             />
                             <Description
-                                Class="service-dec"
+                                Class="features-dec"
                                 Name="A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot."
                             />
                             <Button
@@ -38,30 +38,30 @@ function Service() {
                             />
                         </div>
                     </Col>
-                    <Col lg={7} md={8} className="service-block-content">
+                    <Col lg={7} md={8} className="features-block-content">
                         <Row>
-                            <Col sm={6} className="service-block1">
-                                {Servicedata.map((data, i) => (
-                                    <div className={`service-${i} service-content`} key={data.id}>
-                                        <div className="service-icon">
+                            <Col sm={6} className="features-block1">
+                                {Featuredata.map((data, i) => (
+                                    <div className={`features-${i} features-content`} key={data.id}>
+                                        <div className="features-icon">
                                             <span><PreviewIcon icon={data.Icon} /></span>
                                         </div>
-                                        <div className="service-content-dec">
-                                            <Title Class="service-title" Name={data.title} />
-                                            <Description Class="service-dec-content" Name={data.content} />
+                                        <div className="features-content-dec">
+                                            <Title Class="features-title" Name={data.title} />
+                                            <Description Class="features-dec-content" Name={data.content} />
                                         </div>
                                     </div>
                                 ))}
                             </Col>
-                            <Col sm={6} className="service-block2">
-                                {Servicedata1.map((data, i) => (
-                                    <div className={`service-${i} service-content`} key={data.id}>
-                                        <div className="service-icon">
+                            <Col sm={6} className="features-block2">
+                                {Featuredata1.map((data, i) => (
+                                    <div className={`features-${i} features-content`} key={data.id}>
+                                        <div className="features-icon">
                                             <span><PreviewIcon icon={data.Icon} /></span>
                                         </div>
-                                        <div className="service-content-dec">
-                                            <Title Class="service-title" Name={data.title} />
-                                            <Description Class="service-dec-content" Name={data.content} />
+                                        <div className="features-content-dec">
+                                            <Title Class="features-title" Name={data.title} />
+                                            <Description Class="features-dec-content" Name={data.content} />
                                         </div>
                                     </div>
                                 ))}
@@ -74,4 +74,4 @@ function Service() {
     );
 }
 
-export default Service;
+export default Features;

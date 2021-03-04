@@ -25,16 +25,16 @@ $primary3: var(--primary3);
   .form-wrapper
   .form-group.checkbox-password
   .forget-password,
-.service-content:hover .service-title,
+.features-content:hover .features-title,
 .blog-second-block:hover .blog-title,
 .skills-content-block .progress-outer-block .progress-title,
 .project-wrapper .project-box-outer .counters-number,
-.service-content:hover .service-content-dec .service-title,
+.features-content:hover .features-content-dec .features-title,
 .contact-wrapper .contact-content-block .contact-dec,
 .video-wrapper .video-btn span svg,
 .button1 .btn-icon.gradient-color1 svg,
 .footer-wrapper .footer-content-wrapper .footer-about-us .footer-about-outer svg,
-.service-content:hover .service-icon span svg,
+.features-content:hover .features-icon span svg,
 .blog-second-block:hover .blog-icon span svg,
 .menu-right-1
   .login-register-wrapper
@@ -139,7 +139,7 @@ header.header-sticky.sticky,
   background-image: linear-gradient(white, white), $primary;
 }
 
-.service-content:hover .service-icon span:after,
+.features-content:hover .features-icon span:after,
 .blog-second-block:hover .blog-icon:after,
 .contact-wrapper .contact-animation-images span {
   filter: opacity(0.1) drop-shadow(0 0 0 $primary1);

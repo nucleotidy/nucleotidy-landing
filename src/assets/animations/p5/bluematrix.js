@@ -51,7 +51,7 @@ function Symbol(x, y, speed, opacity) {
   this.switchInterval = p.round(p.random(80, 120));
 
   this.setToRandomSymbol = function() {
-    if (p.frameCount % this.switchInterval == 0) {
+    if (p.frameCount % this.switchInterval === 0) {
       if (counter >= nucleotides.length) counter = 0
       counter++;
       this.value = nucleotides.charAt(counter);

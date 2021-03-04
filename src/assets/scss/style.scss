@@ -223,6 +223,7 @@ header {
     &.sticky {
       padding-top: 0;
       transition: all 0.5s ease-in-out;
+      z-index: 100;
       .logo-wrapper {
         a {
           height: 70px;
@@ -450,7 +451,7 @@ header {
   padding-top: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
 }
-.service-wrapper {
+.features-wrapper {
   &.site-margin {
     margin-bottom: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
   }
@@ -655,7 +656,7 @@ header {
       padding-left: 10px;
     }
   }
-  .service-content-1.main-title-wrapper {
+  .features-content-1.main-title-wrapper {
     text-align: right;
   }
   .about-content-block.main-title-wrapper {
@@ -695,8 +696,8 @@ header {
     }
     text-align: right;
   }
-  .service-content-1 {
-    .service-title {
+  .features-content-1 {
+    .features-title {
       &:after {
         left: auto;
         right: 0;

@@ -4,7 +4,7 @@ import { RingSpinner } from "react-spinners-kit";
 import Navbar from '../containers/navbar'
 import Banner from "../containers/bannerwithp5"
 //import Mission from "../containers/mission"
-import Service from "../containers/service"
+import Features from "../containers/features"
 import About from "../containers/about"
 import Blog from "../containers/blog"
 import Video from "../containers/video"
@@ -32,8 +32,8 @@ const IndexPage = () => {
             <div className="main-wrapper">
                 <Navbar />
                 <div id="main-content">
-                    <Banner ChangeClass={'demo1'} />
-                    <Service />
+                    <Banner ChangeClass={'demo1'} BannerPreview={'minibrowser'} />
+                    <Features />
                     <About />
                     <Blog />
                     <Video />

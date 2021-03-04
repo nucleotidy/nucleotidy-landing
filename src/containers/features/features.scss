@@ -1,13 +1,13 @@
 @import "../../assets/scss/variable.scss";
 
-/* service section css start */
-.service-wrapper {
+/* features section css start */
+.features-wrapper {
   .row {
     align-items: center;
   }
 }
-.service-content-1 {
-  .service-title {
+.features-content-1 {
+  .features-title {
     color: $color-default;
     font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 400;
@@ -20,37 +20,37 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      background: url(../../assets/images/service/left-line.png) no-repeat left;
+      background: url(../../assets/images/features/left-line.png) no-repeat left;
       height: 6px;
       width: 56px;
     }
   }
 }
-.service-content-1 {
+.features-content-1 {
   &.main-title-wrapper {
     margin-bottom: 0;
     padding-right: 50px;
     text-align: left;
   }
 }
-.service-dec {
+.features-dec {
   margin-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
 }
-.service-block2 {
+.features-block2 {
   margin-top: -115px;
 }
-.service-block-content {
+.features-block-content {
   padding-top: calc(25px + (68 - 25) * ((100vw - 320px) / (1920 - 320)));
 }
-.service-content {
+.features-content {
   text-align: center;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   padding: 15px;
   border: 1px solid #eeeeee;
   border-radius: 5px;
-  .service-content-dec {
-    .service-title {
+  .features-content-dec {
+    .features-title {
       color: $color-black;
       font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
       font-weight: 600;
@@ -58,13 +58,13 @@
       margin-bottom: 5px;
       transition: all 0.5s ease-in-out;
     }
-    .service-dec-content {
+    .features-dec-content {
       margin: 0;
     }
   }
 }
 
-.service-icon {
+.features-icon {
   text-align: center;
   position: relative;
   padding: 14px 0;
@@ -80,7 +80,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background: url(../../assets/images/service/img5.png) no-repeat center;
+      background: url(../../assets/images/features/img5.png) no-repeat center;
       left: 0;
       right: 0;
       top: 0;
@@ -101,11 +101,11 @@
     }
   }
 }
-.service-content {
+.features-content {
   &:hover {
     box-shadow: rgba(39, 79, 117, 0.2) 0 40px 90px -30px;
     transform: translateY(-10px);
-    .service-icon {
+    .features-icon {
       span {
         &:after {
           transform: scale(1);
@@ -118,30 +118,30 @@
     }
   }
 }
-.service-content:hover {
-  .service-icon {
+.features-content:hover {
+  .features-icon {
     img {
       box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.35);
     }
   }
 }
-.service-block1,
-.service-block2 {
-  .service-content {
-    &.service-0 {
+.features-block1,
+.features-block2 {
+  .features-content {
+    &.features-0 {
       margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
     }
   }
 }
 /* responsive css */
 @media (max-width: 1199px) {
-  .service-maintitle {
+  .features-maintitle {
     margin-bottom: 10px;
   }
 }
 
 @media (max-width: 1199px) {
-  .service-content-1 {
+  .features-content-1 {
     &.main-title-wrapper {
       padding: 0;
     }
@@ -150,20 +150,20 @@
     padding-top: 25px;
   }
 
-  .service-title {
+  .features-title {
     margin-bottom: 5px;
   }
 }
 @media (max-width: 767px) {
-  .service-block2 {
+  .features-block2 {
     margin: 0;
   }
 }
 @media (max-width: 575px) {
-  .service-block1 .service-content {
-    &.service-1 {
+  .features-block1 .features-content {
+    &.features-1 {
       margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
     }
   }
 }
-/* service section css end */
+/* features section css end */

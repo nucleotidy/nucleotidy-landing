@@ -34,7 +34,7 @@ $bannerimg: var(--bannerimg);
 
 .banner-content {
   button {
-    z-index: 100;
+    z-index: auto;
   }
   .banner-main-title {
     font-size: calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320)));
@@ -46,7 +46,7 @@ $bannerimg: var(--bannerimg);
     h4 span{
       position: relative;
       background-color: white;
-      z-index: 10;
+      z-index: auto;
     }
   }
   .banner-dec {
@@ -55,9 +55,14 @@ $bannerimg: var(--bannerimg);
     margin-bottom: 53px;
   }
   .banner-btn-wrapper Button {
-    z-index: 100;
+    z-index: 2;
   }
 }
+
+.ch-mini-browser {
+  box-shadow:  0 4px 9px 0 rgba(240, 210, 210, 0.6);
+  }
+
 
 .banner-image {
   text-align: right;

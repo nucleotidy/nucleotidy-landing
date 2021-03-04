@@ -101,7 +101,7 @@ function Footer() {
                                                     <PreviewIcon icon={arrowRightCircle} />
                                                     <Title
                                                         Class="footer-link footer-arrow"
-                                                        Name="Services"
+                                                        Name="Features"
                                                     />
                                                 </a>
                                             </li>

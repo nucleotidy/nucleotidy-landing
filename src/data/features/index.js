@@ -1,6 +1,6 @@
 import { suitcase, objectGroup, areaChart, trophy } from 'react-icons-kit/fa'
 
-const Servicedata = [
+const Featuredata = [
   {
     id: 1,
     Icon: suitcase,
@@ -15,7 +15,7 @@ const Servicedata = [
   }
 ]
 
-const Servicedata1 = [
+const Featuredata1 = [
   {
     id: 1,
     Icon: areaChart,
@@ -30,4 +30,4 @@ const Servicedata1 = [
   }
 ]
 
-export { Servicedata, Servicedata1 }
+export { Featuredata, Featuredata1 }
