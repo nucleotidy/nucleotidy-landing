@@ -16,26 +16,29 @@ function Features() {
                         <div className="features-content-1 main-title-wrapper">
                             <Titlespan2
                                 Class="sitemain-subtitle"
-                                Name="Business"
-                                Label="Solutions"
+                                Name="Overwhelmed by data management and analysis?"
                             />
-                            <Subtitle
+                          {/*  <Subtitle
                                 Class="site-subtitle2"
                                 Name="We Provide The"
                             />
                             <Title
                                 Class="features-title"
                                 Name="Our core features"
-                            />
-                            <Description
-                                Class="features-dec"
-                                Name="A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot."
-                            />
-                            <Button
+                            /> */}
+                            <p>When working with genome data, many challenges exist before you can address <span>your actual research question</span>:</p>
+                            <ul>
+                            <li>How to facilitate shared, yet secure access to data and tools for all collaborators?</li>
+                            <li>How to provision the infrastructure to analyse the data?</li>
+                            <li>How to manage software dependencies and ensure computational reproducibility?</li>
+                            <li>How to make the results approachable and searchable?</li>
+                            </ul>
+                            <p><span>Nucleotidy is your shortcut:</span> It helps you organize your sequence data as neatly as it was when it still resided within a cell.</p>
+                            {/*   <Button
                                 Class="button1 btn button2 gradient-color"
                                 Name="Explore"
                                 BtnIcon="btn-icon"
-                            />
+                            /> */}
                         </div>
                     </Col>
                     <Col lg={7} md={8} className="features-block-content">

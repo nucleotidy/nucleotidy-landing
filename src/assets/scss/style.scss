@@ -10,7 +10,7 @@ $subheadingfont: "nunito";
 /* common css */
 body {
   background-color: $color-white;
-  font-size: 15px;
+  font-size: 16px;
   color: $color-black;
   width: 100%;
   position: relative;
@@ -90,7 +90,7 @@ body.open {
 
 p {
   color: $color-default;
-  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(16px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
   font-weight: 500;
   position: relative;
   margin-bottom: 15px;
@@ -341,7 +341,7 @@ header {
   .site-subtitle {
     font-weight: 400;
     font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
-    color: $color-black;
+    color: $nhighlight2;
     margin-bottom: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
     display: inline-block;
     vertical-align: middle;
@@ -350,19 +350,20 @@ header {
     padding: 7px 30px 5px;
   }
   .site-subtitle2 {
-    color: $color-default1;
+    color: $nhighlight2;
     font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 500;
     position: relative;
     margin-bottom: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
-    text-transform: capitalize;
+    //text-transform: capitalize;
   }
   .sitemain-subtitle {
     font-weight: 600;
     font-size: calc(24px + (42 - 24) * ((100vw - 320px) / (1920 - 320)));
-    color: $color-black;
+    color: $nhighlight6 ;
+    text-shadow: 1px 1px $nhighlight7;
     margin-bottom: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
-    text-transform: capitalize;
+    //text-transform: capitalize;
     span {
       display: inline-block;
       vertical-align: middle;
@@ -370,7 +371,7 @@ header {
   }
   .site-dec {
     margin-bottom: 10px;
-    text-transform: capitalize;
+    //text-transform: capitalize;
     max-width: 650px;
     margin: 0 auto;
   }

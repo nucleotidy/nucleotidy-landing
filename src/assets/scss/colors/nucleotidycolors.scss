@@ -5,8 +5,17 @@
   --primary3: rgba(187, 246, 99, 0.1);
   --nhighlight: #bbf663;
   --nhighlight2: #81b298;
+  --nhighlight3: #2c89a0;
+  --nhighlight3dark: #5A204C;
+  --nhighlight4: #59a5d8;
+  --nhighlight5: #843b62; //rgba(31,105,124,1);
+  --nhighlight6: #B88B4A;
+  --nhighlight7: #6A5837; //#A27035;
+  --nhighlight8: #7A306C;
   --nbackground: #073a4d;
 }
+
+
 
 $primary: var(--primary);
 $primary1: var(--primary1);
@@ -14,6 +23,13 @@ $primary2: var(--primary2);
 $primary3: var(--primary3);
 $nhighlight: var(--nhighlight);
 $nhighlight2: var(--nhighlight2);
+$nhighlight3: var(--nhighlight3);
+$nhighlight3dark: var(--nhighlight3dark);
+$nhighlight4: var(--nhighlight4);
+$nhighlight5: var(--nhighlight5);
+$nhighlight6: var(--nhighlight6);
+$nhighlight7: var(--nhighlight7);
+$nhighlight8: var(--nhighlight8);
 $nbackground: var(--nbackground);
 
 .project-wrapper .project-box-outer .counters-number,
