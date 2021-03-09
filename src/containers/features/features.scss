@@ -25,6 +25,28 @@
     text-align: left;
   }
 }
+
+ul.features-content-1 {
+  font-size: calc(16px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+  margin: 1.5em 0em;
+  color: $color-default;
+  li {
+    text-indent: -1.2em;
+    margin-left: 3em;
+    line-height: 1.2em;
+    padding-bottom: 0.5em;
+  }
+  li::before {
+    padding: 0;
+    color: $nhighlight6;
+    font-weight: 600;
+    font-size: 1.5em;
+    content: '\2192';
+    position: relative;
+    left: -0.3em;
+  }
+}
+
 .features-dec {
   margin-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
 }
