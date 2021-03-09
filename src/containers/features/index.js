@@ -26,12 +26,12 @@ function Features() {
                                 Class="features-title"
                                 Name="Our core features"
                             /> */}
-                            <p>When working with genome data, many challenges exist before you can address <span>your actual research question</span>:</p>
+                            <p>When working with genome data, many challenges await before you can address <span>your actual research question</span>:</p>
                             <ul>
-                            <li>How to facilitate shared, yet secure access to data and tools for all collaborators?</li>
-                            <li>How to provision the infrastructure to analyse the data?</li>
                             <li>How to manage software dependencies and ensure computational reproducibility?</li>
+                            <li>How to provision the infrastructure to analyse the data?</li>
                             <li>How to make the results approachable and searchable?</li>
+                            <li>How to facilitate shared, yet secure access to data and tools for all collaborators?</li>
                             </ul>
                             <p><span>Nucleotidy is your shortcut:</span> It helps you organize your sequence data as neatly as it was when it still resided within a cell.</p>
                             {/*   <Button

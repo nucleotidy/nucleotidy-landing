@@ -26,7 +26,7 @@ function Banner(props) {
                                 />
                                 <Description
                                     Class="banner-dec"
-                                    Name="the sleek and collaborative platform for geneticists."
+                                    Name="the elaborate platform for geneticists."
                                 />
                                 <div className="banner-btn-wrapper">
                                     <Button

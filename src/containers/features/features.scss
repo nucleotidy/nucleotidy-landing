@@ -16,15 +16,6 @@
     padding-bottom: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
     margin-bottom: calc(14px + (22 - 14) * ((100vw - 320px) / (1920 - 320)));
     //text-transform: capitalize;
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      background: url(../../assets/images/features/left-line.png) no-repeat left;
-      height: 6px;
-      width: 56px;
-    }
   }
 }
 .features-content-1 {
@@ -109,7 +100,7 @@
     .features-icon {
       span {
         &:after {
-          transform: scale(1);
+          transform: scale(1.1);
         }
         i {
           -webkit-background-clip: text;

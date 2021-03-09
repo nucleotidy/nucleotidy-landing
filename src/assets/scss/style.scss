@@ -64,8 +64,26 @@ button:focus {
 .btn {
   border: none;
 }
+
 ul {
-  margin: 0;
+  font-size: calc(16px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+  margin: 1.5em 0em;
+  color: $color-default;
+  li {
+    text-indent: -1.2em;
+    margin-left: 3em;
+    line-height: 1.2em;
+    padding-bottom: 0.5em;
+  }
+  li::before {
+    padding: 0;
+    color: $nhighlight6;
+    font-weight: 600;
+    font-size: 1.5em;
+    content: '\2192';
+    position: relative;
+    left: -0.3em;
+  }
 }
 .container {
   max-width: 1440px;
@@ -95,6 +113,11 @@ p {
   position: relative;
   margin-bottom: 15px;
   transition: all 0.5s ease-in-out;
+  span {
+    //font-weight: bolder;
+    text-decoration: underline;
+    color: $nbackground;
+  }
 }
 .slick-dots li.slick-active button:before,
 .slick-dots li button:before {
