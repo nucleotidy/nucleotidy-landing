@@ -48,6 +48,7 @@ function Features() {
                                     <div className={`features-${i} features-content`} key={data.id}>
                                         <div className="features-icon">
                                             <span><PreviewIcon icon={data.Icon} /></span>
+                                            <span><PreviewIcon icon={data.IconB} /></span>
                                         </div>
                                         <div className="features-content-dec">
                                             <Title Class="features-title" Name={data.title} />
@@ -61,6 +62,7 @@ function Features() {
                                     <div className={`features-${i} features-content`} key={data.id}>
                                         <div className="features-icon">
                                             <span><PreviewIcon icon={data.Icon} /></span>
+                                            <span><PreviewIcon icon={data.IconB} /></span>
                                         </div>
                                         <div className="features-content-dec">
                                             <Title Class="features-title" Name={data.title} />

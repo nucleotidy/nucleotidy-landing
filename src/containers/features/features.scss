@@ -26,7 +26,7 @@
   }
 }
 
-ul.features-content-1 {
+.features-content-1 ul{
   font-size: calc(16px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
   margin: 1.5em 0em;
   color: $color-default;
@@ -38,7 +38,7 @@ ul.features-content-1 {
   }
   li::before {
     padding: 0;
-    color: $nhighlight6;
+    color: $nhighlight3;
     font-weight: 600;
     font-size: 1.5em;
     content: '\2192';
@@ -63,6 +63,9 @@ ul.features-content-1 {
   padding: 15px;
   border: 1px solid #eeeeee;
   border-radius: 5px;
+  background-color: lighten(#B88B4A,80%);
+  //color the text even when mouse is not directly above it: https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered
+  &:hover .features-dec-content {color: $color-white;}  
   .features-content-dec {
     .features-title {
       color: $nbackground;
@@ -73,7 +76,8 @@ ul.features-content-1 {
       transition: all 0.5s ease-in-out;
     }
     .features-dec-content {
-      margin: 0;
+      margin: 0.5em;
+      text-align: left;
     }
   }
 }
@@ -94,13 +98,13 @@ ul.features-content-1 {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: url(../../assets/images/features/img5.png) no-repeat center;
+      //background: url(../../assets/images/features/img5.png) no-repeat center;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
       margin: auto;
-      transform: scale(0.4);
+      transform: scale(0.7);
       filter: opacity(0);
       transition: all 0.5s ease-in-out;
     }
@@ -110,13 +114,14 @@ ul.features-content-1 {
       line-height: 32px;
       position: relative;
       z-index: 1;
-      color: $nhighlight2;
+      color: $nhighlight3;
       transition: all 0.5s ease-in-out;
     }
   }
 }
 .features-content {
   &:hover {
+    background-color: $nbackground;
     box-shadow: rgba(39, 79, 117, 0.2) 0 40px 90px -30px;
     transform: translateY(-10px);
     .features-icon {

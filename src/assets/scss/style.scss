@@ -66,25 +66,9 @@ button:focus {
 }
 
 ul {
-  font-size: calc(16px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
-  margin: 1.5em 0em;
-  color: $color-default;
-  li {
-    text-indent: -1.2em;
-    margin-left: 3em;
-    line-height: 1.2em;
-    padding-bottom: 0.5em;
-  }
-  li::before {
-    padding: 0;
-    color: $nhighlight6;
-    font-weight: 600;
-    font-size: 1.5em;
-    content: '\2192';
-    position: relative;
-    left: -0.3em;
-  }
+  margin: 0;
 }
+
 .container {
   max-width: 1440px;
 }
@@ -383,8 +367,8 @@ header {
   .sitemain-subtitle {
     font-weight: 600;
     font-size: calc(24px + (42 - 24) * ((100vw - 320px) / (1920 - 320)));
-    color: $nhighlight6 ;
-    text-shadow: 1px 1px $nhighlight7;
+    color: $nhighlight3 ;
+    text-shadow: 1px 1px $nhighlight3dark;
     margin-bottom: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
     //text-transform: capitalize;
     span {
