@@ -6,14 +6,16 @@ import Banner from "../containers/bannerwithp5"
 //import Mission from "../containers/mission"
 import Features from "../containers/features"
 import About from "../containers/about"
+/*
 import Blog from "../containers/blog"
 import Video from "../containers/video"
 import Skills from "../containers/skills"
 import Project from "../containers/project"
 import Portfolio from '../containers/portfolio'
 import Testimonial from '../containers/testimonial'
-import Contact from '../containers/contact'
 import Brand from '../containers/brands'
+*/
+import Contact from '../containers/contact'
 import Footer from '../containers/footer'
 import CopyRight from '../containers/copyright_text'
 import "../assets/scss/style.scss"
@@ -35,14 +37,16 @@ const IndexPage = () => {
                     <Banner ChangeClass={'demo1'} BannerPreview={'minibrowser'} />
                     <Features />
                     <About />
+                    {/*
                     <Blog />
                     <Video />
                     <Skills />
                     <Project />
                     <Portfolio />
                     <Testimonial />
-                    <Contact />
                     <Brand />
+                    */}
+                    <Contact />
                     <Footer />
                     <CopyRight />
                 </div>
