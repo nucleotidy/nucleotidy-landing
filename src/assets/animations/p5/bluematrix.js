@@ -1,6 +1,8 @@
 
 export default function sketch(p) {
 
+if (typeof window !== 'undefined') {
+
 var streams = [];
 var fadeInterval = 2.2;
 var symbolSize = 15;
@@ -97,4 +99,4 @@ function Stream() {
 }
 
 
-}
+}}

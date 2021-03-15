@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import { Container, Row, Col } from 'reactstrap';
 import { MiniBrowser } from "@code-hike/mini-browser"
 import Button from '../../components/button';
@@ -9,6 +9,7 @@ import PreviewImg1 from '../../assets/images/banner/platformpreview.png';
 import P5Wrapper from 'react-p5-wrapper';
 import sketch from '../../assets/animations/p5/bluematrix.js';
 import './banner.scss';
+
 
 function Banner(props) {
 
