@@ -6,7 +6,7 @@ import { Titlespan, Description } from '../../components/title/index';
 import Image from '../../components/image/index';
 import BannerImg1 from '../../assets/images/banner/bannerimg.png';
 import PreviewImg1 from '../../assets/images/banner/platformpreview.png';
-import P5Wrapper from 'react-p5-wrapper';
+import SketchWrapper from '../../components/ssrP5/index';
 import sketch from '../../assets/animations/p5/bluematrix.js';
 import './banner.scss';
 
@@ -67,7 +67,7 @@ function Banner(props) {
                         </Col>
                     </Row>
                 </Container>
-                <P5Wrapper sketch={sketch} />
+                <SketchWrapper sketch={sketch} />
             </div>
         </section>
     );
