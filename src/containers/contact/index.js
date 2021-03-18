@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, FormGroup } from 'reactstrap';
 // import Img from "gatsby-image"
-import { Subtitle, Description, Title } from '../../components/title/index';
-import Image from '../../components/image/index';
-import ContactImg from '../../assets/images/contact/woman.png';
+import { Subtitle, Title } from '../../components/title/index';
+//import Image from '../../components/image/index';
+//import ContactImg from '../../assets/images/contact/woman.png';
 import InputBox from '../../components/input/index';
 import Button from '../../components/button';
-import ContactBackgroundImages from '../../data/contact';
+//import ContactBackgroundImages from '../../data/contact';
+import SketchWrapper from '../../components/ssrP5/index';
+import sketch from '../../assets/animations/p5/contactmessages.js';
 import '../contact/contact.scss';
 
 
@@ -17,7 +19,14 @@ function Contact() {
     const [message, setMessage] = useState('');
     const [errors, setErrors] = useState({});
 
-    const handelSubmit = () => {
+    const encode = data => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    };
+
+
+    const handleSubmit = () => {
         const error = {}
         if (!name) {
             error.name = 'First Name field shouldn’t be empty';
@@ -32,6 +41,7 @@ function Contact() {
         if (error) {
             setErrors(error)
         } else {
+
             setName('');
             setEmail('');
             setMessage('');
@@ -40,24 +50,25 @@ function Contact() {
 
     return (
         <section className="contact-wrapper" id="contact">
-            <div className="contact-animation-images">
+         <SketchWrapper sketch={sketch} />
+              {/*  <div className="contact-animation-images">
                 {ContactBackgroundImages.map((img, index) => (
                     <span key={`contact-img-${index}`} className={`image${index + 1}`}><Image Path={img.img} /></span>
                 ))}
-            </div>
+            </div> */}
             <Container>
                 <Row>
-                    <Col sm={0} md={6}>
+                    <Col sm={0} md={2}>
                         <div className="contact-image">
-                            {/* <Img fluid={data.placeholderImage.childImageSharp.fluid} /> */}
-                            <Image Path={ContactImg} Class="logo-img" />
+                            {/* <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+                            <Image Path={ContactImg} Class="logo-img" />*/}
                         </div>
                     </Col>
-                    <Col md={6}>
+                    <Col md={8}>
                         <div className="contact-content-block main-title-wrapper">
                             <Subtitle
                                 Class="sitemain-subtitle"
-                                Name="Send us mesage for any Info"
+                                Name="It seems, there is a message in the making...?"
                             />
                             {/*
                             <Subtitle
@@ -69,13 +80,14 @@ function Contact() {
                                 Name="+1 123 - 456 - 7890"
                             /> */}
                             <div className="form">
-                                <Form method="POST">
+                                <Form method="POST" netlify data-netlify="true" name="contact">
+                                <input type="hidden" name="form-name" value="contact" />
                                     <FormGroup>
                                         <Title Class="form-label" Name="Name *" />
                                         <InputBox
                                             Type="text"
                                             Name="name"
-                                            PlaceHolder="John Doe"
+                                            PlaceHolder="Har Gobind Khorana"
                                             value={name}
                                             ChangeValue={setName}
                                             Class={errors && errors.name && 'error'}
@@ -86,7 +98,7 @@ function Contact() {
                                         <InputBox
                                             Type="text"
                                             Name="email"
-                                            PlaceHolder="example@gmail.com"
+                                            PlaceHolder="khorana@uag.rna"
                                             value={email}
                                             ChangeValue={setEmail}
                                             Class={errors && errors.email && 'error'}
@@ -97,7 +109,7 @@ function Contact() {
                                         <InputBox
                                             Type="textarea"
                                             Name="text"
-                                            PlaceHolder="write your message"
+                                            PlaceHolder="CCACCTTCCCCTCCTCCGGCTTTTTCCTCCCAACTCGGGGAGGTCCTTCCCGGTGGCCGCCCTGACGAGGTCTGAGCACCTAGGCGGAGGCGGCGCAGGCTTTTTGTAGTGAGGTTTGCGCCTGCGCAGCGCGCCTGCCTCCGCCATGCACGGGGGTGGCCCCCCCTCGGGGGACAGCGCATGCCCGCTGCGCACCATCAAGAGAGT..."
                                             Class={`textbox ${errors && errors.message && 'error'}`}
                                             value={message}
                                             ChangeValue={setMessage}
@@ -107,10 +119,15 @@ function Contact() {
                             </div>
                             <Button
                                 Class="button1 btn button2 gradient-color"
-                                Name="Send your message"
-                                Clickble={handelSubmit}
+                                Name="Deliver your message"
+                                Clickble={handleSubmit}
                                 BtnIcon="btn-icon"
                             />
+                        </div>
+                    </Col>
+                    <Col sm={0} md={2}>
+                        <div className="contact-right">
+                        <br />
                         </div>
                     </Col>
                 </Row>
