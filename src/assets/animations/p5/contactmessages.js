@@ -39,9 +39,10 @@ export default function sketch(p) {
   var y = 0
   var stepSize = 5.0
 
-  var font = 'Lato'
-  var letters = 'CATCAAATGATAGTTCTGTTTTCAGCTCTTTGAGGAATCACCACACTCCCACAGTGGTCAAACCAATTTACACCCCCACCAAGAGCGTATAAGCATTCCTTTTTCTCTGCAACCTCACCAGAACCGGGCTCTTAGCTATCAAGCCTCTTGCTCTCCCCTTCCAGCAGCTGCTAATTATAATAGCTGCATTTTCTAATGTTTGCTGAGCTCAAACGCTGCTGGGCCCTAGGCTAATCACTTGCAGGAATTAGTGCCAGGACGTGGGGCTGGTGACAGTCCCTTCCTCAGAGGATGGTCAGGCGGTATAAGGATCTAACACAAGCAAGACCTGGCACTGTAATCATGGCAGACCACAGGCCATTCTTGTTGTTTCCAGCCACTTTTATGTCTTAGAACTGTTCTAGATTTACAGAACTGAGAAGATAG'
-  var fontSizeMin = 3
+  var font = 'hua-regular'
+  //var letters = 'CATCAAATGATAGTTCTGTTTTCAGCTCTTTGAGGAATCACCACACTCCCACAGTGGTCAAACCAATTTACACCCCCACCAAGAGCGTATAAGCATTCCTTTTTCTCTGCAACCTCACCAGAACCGGGCTCTTAGCTATCAAGCCTCTTGCTCTCCCCTTCCAGCAGCTGCTAATTATAATAGCTGCATTTTCTAATGTTTGCTGAGCTCAAACGCTGCTGGGCCCTAGGCTAATCACTTGCAGGAATTAGTGCCAGGACGTGGGGCTGGTGACAGTCCCTTCCTCAGAGGATGGTCAGGCGGTATAAGGATCTAACACAAGCAAGACCTGGCACTGTAATCATGGCAGACCACAGGCCATTCTTGTTGTTTCCAGCCACTTTTATGTCTTAGAACTGTTCTAGATTTACAGAACTGAGAAGATAG'
+  var letters = 'catcaaatgatagttctgttttcagctctttgaggaatcaccacactcccacagtggtcaaaccaatttacacccccaccaagagcgtataagcattcctttttctctgcaacctcaccagaaccgggctcttagctatcaagcctcttgctctccccttccagcagctgctaattataatagctgcattttctaatgtttgctgagctcaaacgctgctgggccctaggctaatcacttgcaggaattagtgccaggacgtggggctggtgacagtcccttcctcagaggatggtcaggcggtataaggatctaacacaagcaagacctggcactgtaatcatggcagaccacaggccattcttgttgtttccagccacttttatgtcttagaactgttctagatttacagaactgagaagatag'
+  var fontSizeMin = 2
   var angleDistortion = 0.0
 
   var counter = 0
@@ -53,8 +54,8 @@ export default function sketch(p) {
   // ~~~~~~ Setup ~~~~~~
   p.setup = () => {
   // use full screen size
-  p.createCanvas(p.displayWidth, p.displayHeight)
-  p.background(7,58,77)
+  p.createCanvas(p.displayWidth, 700)
+  //p.background(7,58,77)
   p.cursor(p.TEXT)
 
   x = p.mouseX
@@ -62,20 +63,36 @@ export default function sketch(p) {
 
   p.textFont(font)
   p.textAlign(p.LEFT)
-  //p.fill(248,245,238)
-  //p.stroke(129,178,152)
-  p.stroke(7,58,77)
-  p.fill(129,178,152)
+  // 2c89a0 30%, #59a5d8
+  p.fill(44,137,160)
+  //p.stroke(89,165,216)
   }
 
   // ~~~~~~ Draw ~~~~~~
   p.draw = () => {
     if (p.mouseIsPressed && p.mouseButton == p.LEFT) {
       var d = p.dist(x, y, p.mouseX, p.mouseY)
-      p.textSize(fontSizeMin + d / 2)
-      p.strokeWeight(d/20)
+      p.textSize(fontSizeMin + d / 12)
+      //p.strokeWeight(d/40)
       var newLetter = letters.charAt(counter)
       stepSize = p.textWidth(newLetter)
+
+      switch (newLetter) {
+        case "a":
+          p.fill(212,0,0);
+          break;
+        case "c":
+          p.fill(255,204,0);
+          break;
+        case "t":
+          p.fill(87,202,133);
+          break;
+        case "g":
+          p.fill(56,111,164);
+          break;
+        default:
+          p.fill(44,137,160);
+      }
 
       if (d > stepSize) {
         var angle = p.atan2(p.mouseY - y, p.mouseX - x)
@@ -102,18 +119,6 @@ export default function sketch(p) {
   }
 
   p.mouseReleased = () => {
-
-  }
-
-  p.keyPressed = () => {
-    if (p.key == 's' || p.key == 'S') p.saveCanvas(Date.now().toString(), 'png')
-    // angleDistortion ctrls arrowkeys up/down
-    if (p.keyCode == p.UP_ARROW) angleDistortion += 0.1
-    if (p.keyCode == p.DOWN_ARROW) angleDistortion -= 0.1
-  }
-
-  p.keyReleased = () => {
-    if (p.keyCode == p.DELETE || p.keyCode == p.BACKSPACE) p.background(255)
 
   }
 
