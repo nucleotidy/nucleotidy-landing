@@ -1,5 +1,5 @@
 import {objectGroup, areaChart} from 'react-icons-kit/fa'
-import {code} from 'react-icons-kit/iconic/code'
+//import {code} from 'react-icons-kit/iconic/code'
 import {tree} from 'react-icons-kit/icomoon/tree'
 import {play2} from 'react-icons-kit/icomoon/play2'
 import {folderOpen} from 'react-icons-kit/icomoon/folderOpen'

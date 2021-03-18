@@ -32,7 +32,11 @@ function About() {
                             />
                             <Description
                                 Class="about-dec"
-                                Name="Hence, I envisioned a user-friendly genomics platform to free small businesses or decentralized labs from the burden of DevOps."
+                                Name="Hence, I envisioned a user-friendly genomics platform to free small businesses or decentralized labs from the burden of operating and maintaining a complex compute infrastructure. At Nucleotidy, private containerized and encrypted workspaces ensure high security standards and user isolation, while at the same time benefitting from access to cloud ressources like managed software packages, reference data and compute nodes for processing."
+                            />
+                            <Description
+                                Class="about-dec"
+                                Name="To turn this concept into reality, I looking for co-founders, mentors and investors. If you are working with genomic data, I would also love to hear about your use case and specific requirements."
                             />
                             <Titlespan2
                                 Class="about-twosub-title"

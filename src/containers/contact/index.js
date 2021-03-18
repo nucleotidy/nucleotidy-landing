@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, FormGroup } from 'reactstrap';
 // import Img from "gatsby-image"
-import { Subtitle, Description, Title } from '../../components/title/index';
+import { Subtitle, Title } from '../../components/title/index';
 //import Image from '../../components/image/index';
 //import ContactImg from '../../assets/images/contact/woman.png';
 import InputBox from '../../components/input/index';
@@ -19,7 +19,14 @@ function Contact() {
     const [message, setMessage] = useState('');
     const [errors, setErrors] = useState({});
 
-    const handelSubmit = () => {
+    const encode = data => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    };
+
+
+    const handleSubmit = () => {
         const error = {}
         if (!name) {
             error.name = 'First Name field shouldn’t be empty';
@@ -34,6 +41,7 @@ function Contact() {
         if (error) {
             setErrors(error)
         } else {
+
             setName('');
             setEmail('');
             setMessage('');
@@ -72,7 +80,8 @@ function Contact() {
                                 Name="+1 123 - 456 - 7890"
                             /> */}
                             <div className="form">
-                                <Form method="POST">
+                                <Form method="POST" netlify data-netlify="true" name="contact">
+                                <input type="hidden" name="form-name" value="contact" />
                                     <FormGroup>
                                         <Title Class="form-label" Name="Name *" />
                                         <InputBox
@@ -110,8 +119,8 @@ function Contact() {
                             </div>
                             <Button
                                 Class="button1 btn button2 gradient-color"
-                                Name="Send your message"
-                                Clickble={handelSubmit}
+                                Name="Deliver your message"
+                                Clickble={handleSubmit}
                                 BtnIcon="btn-icon"
                             />
                         </div>
