@@ -1,6 +1,8 @@
 
 export default function sketch(p) {
 
+
+
 var streams = [];
 var fadeInterval = 2.2;
 var symbolSize = 15;

@@ -1,4 +1,5 @@
 @import "../../assets/scss/variable.scss";
+@import "../../assets/scss/colors/nucleotidycolors.scss";
 
 :root {
   --bannerimg: url("../../assets/images/banner/bgp5.svg");
@@ -12,9 +13,10 @@ $bannerimg: var(--bannerimg);
   background-size: cover;
   background-image: $bannerimg;
   width: 100%;
-  height: 800px;
+  height:90vh;
+  min-height:90vh;;
   display: block;
-  padding-top: calc(85px + (170 - 85) * ((100vw - 320px) / (1920 - 320)));
+  padding-top: calc(185px + (170 - 85) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: calc(70px + (180 - 70) * ((100vw - 320px) / (1920 - 320)));
   canvas {
     position: absolute;
@@ -33,6 +35,7 @@ $bannerimg: var(--bannerimg);
 }
 
 .banner-content {
+
   button {
     z-index: auto;
   }
@@ -61,6 +64,23 @@ $bannerimg: var(--bannerimg);
 
 .ch-mini-browser {
   box-shadow:  0 4px 9px 0 rgba(240, 210, 210, 0.6);
+    .browser-subtitle {
+      color: $nhighlight3;
+      font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
+      font-weight: 400;
+      position: relative;
+      padding: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
+      //text-transform: capitalize;
+    }
+    .browser-dec {
+      color: $color-black;
+      font-size: calc(12px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
+      font-weight: 300;
+      padding: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
+      padding-top: 0;
+      margin-bottom: calc(14px + (22 - 14) * ((100vw - 320px) / (1920 - 320)));
+      //text-transform: capitalize;
+    }
   }
 
 
