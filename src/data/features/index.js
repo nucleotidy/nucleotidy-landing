@@ -20,7 +20,7 @@ const Featuredata = [
     Icon: tree,
     IconB: play2,
     title: 'Preconfigured Pipelines',
-    content: 'Edit and excute pipelines in various workflow languages. Build and test locally and excute on your on-premise cluster or scale-out to cloud platforms.'
+    content: 'Excute public pipelines by the community or build your own using various common workflow languages. Build and test locally and excute on your on-premise cluster or scale-out to cloud platforms.'
   }
 ]
 
@@ -30,14 +30,14 @@ const Featuredata1 = [
     Icon: areaChart,
     IconB: stack,
     title: 'Vivid visualizations',
-    content: 'Integrated genome browser and variant inspector invite exploration and make your data tangible.'
+    content: 'Integrated genome browser and variant inspector invite exploration and make your data tangible. The modern technology stack ensures short latencies even for considerable data volumes.'
   },
   {
     id: 2,
     Icon: cloudDownload,
     IconB: cloudUpload,
     title: 'Fully containerized offline capabilities',
-    content: 'Configure your workspace while connected to a network and automatically download required tools and cached annotation data for offline use. Sync presets to kickstart creation of similar environments.'
+    content: 'Configure your project\'s workspace while connected to a network and automatically download required tools and cache annotation data for offline use. Sync your presets to kickstart creation of similar environments.'
   }
 ]
 

@@ -59,6 +59,7 @@ function Contact() {
                                 Class="sitemain-subtitle"
                                 Name="Send us mesage for any Info"
                             />
+                            {/*
                             <Subtitle
                                 Class="site-subtitle2"
                                 Name="Call us for any emergency"
@@ -66,7 +67,7 @@ function Contact() {
                             <Description
                                 Class="contact-dec"
                                 Name="+1 123 - 456 - 7890"
-                            />
+                            /> */}
                             <div className="form">
                                 <Form method="POST">
                                     <FormGroup>
@@ -106,7 +107,7 @@ function Contact() {
                             </div>
                             <Button
                                 Class="button1 btn button2 gradient-color"
-                                Name="SUBMIT"
+                                Name="Send your message"
                                 Clickble={handelSubmit}
                                 BtnIcon="btn-icon"
                             />
