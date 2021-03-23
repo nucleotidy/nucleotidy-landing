@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Form, FormGroup } from 'reactstrap';
-import axios from "axios"
-import * as qs from "query-string"
 // import Img from "gatsby-image"
 import { Subtitle, Title } from '../../components/title/index';
 //import Image from '../../components/image/index';
@@ -13,52 +11,43 @@ import SketchWrapper from '../../components/ssrP5/index';
 import sketch from '../../assets/animations/p5/contactmessages.js';
 import '../contact/contact.scss';
 
-class Contact extends React.Component {
 
-  constructor(props) {
-    super(props)
-    this.domRef = React.createRef()
-    this.state = { feedbackMsg: null }
-	}
+function Contact() {
 
-  handleSubmit(event) {
-    // Code source https://www.seancdavis.com/blog/how-to-use-netlify-forms-with-gatsby/
-    // Do not submit form via HTTP, since we're doing that via XHR request.
-    event.preventDefault()
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [errors, setErrors] = useState({});
 
-      // Loop through this component's refs (the fields) and add them to the
-      // formData object. What we're left with is an object of key-value pairs
-      // that represent the form data we want to send to Netlify.
-      const formData = {}
-      Object.keys(this.refs).map(key => (formData[key] = this.refs[key].value))
+    const encode = data => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    };
 
-    // Set options for axios. The URL we're submitting to
-    // (this.props.location.pathname) is the current page.
-    const axiosOptions = {
-      url: this.props.location.pathname,
-      method: "post",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      data: qs.stringify(formData),
+
+    const handleSubmit = () => {
+        const error = {}
+        if (!name) {
+            error.name = 'First Name field shouldn’t be empty';
+        }
+        if (!email) {
+            error.email = 'Email field shouldn’t be empty';
+        }
+        if (!message) {
+            error.message = 'Message field shouldn’t be empty';
+        }
+
+        if (error) {
+            setErrors(error)
+        } else {
+
+            setName('');
+            setEmail('');
+            setMessage('');
+        }
     }
 
-    // Submit to Netlify. Upon success, set the feedback message and clear all
-    // the fields within the form. Upon failure, keep the fields as they are,
-    // but set the feedback message to show the error state.
-    axios(axiosOptions)
-      .then(response => {
-        this.setState({
-          feedbackMsg: "Form submitted successfully!",
-        })
-        this.domRef.current.reset()
-      })
-      .catch(err =>
-        this.setState({
-          feedbackMsg: "Form could not be submitted.",
-        })
-      )
-  }
-
- render() {
     return (
         <section className="contact-wrapper" id="contact">
          <SketchWrapper sketch={sketch} />
@@ -91,14 +80,17 @@ class Contact extends React.Component {
                                 Name="+1 123 - 456 - 7890"
                             /> */}
                             <div className="form">
-                                <Form ref={this.domRef} method="POST" data-netlify="true" name="Contact Form"  onSubmit={event => this.handleSubmit(event)}>
-                                <input type="hidden" name="form-name" value="Contact Form" />
+                                <Form method="POST" netlify data-netlify="true" name="contact">
+                                <input type="hidden" name="form-name" value="contact" />
                                     <FormGroup>
                                         <Title Class="form-label" Name="Name *" />
                                         <InputBox
                                             Type="text"
                                             Name="name"
                                             PlaceHolder="Har Gobind Khorana"
+                                            value={name}
+                                            ChangeValue={setName}
+                                            Class={errors && errors.name && 'error'}
                                         />
                                     </FormGroup>
                                     <FormGroup>
@@ -107,6 +99,9 @@ class Contact extends React.Component {
                                             Type="text"
                                             Name="email"
                                             PlaceHolder="khorana@uag.rna"
+                                            value={email}
+                                            ChangeValue={setEmail}
+                                            Class={errors && errors.email && 'error'}
                                         />
                                     </FormGroup>
                                     <FormGroup>
@@ -115,6 +110,9 @@ class Contact extends React.Component {
                                             Type="textarea"
                                             Name="text"
                                             PlaceHolder="CCACCTTCCCCTCCTCCGGCTTTTTCCTCCCAACTCGGGGAGGTCCTTCCCGGTGGCCGCCCTGACGAGGTCTGAGCACCTAGGCGGAGGCGGCGCAGGCTTTTTGTAGTGAGGTTTGCGCCTGCGCAGCGCGCCTGCCTCCGCCATGCACGGGGGTGGCCCCCCCTCGGGGGACAGCGCATGCCCGCTGCGCACCATCAAGAGAGT..."
+                                            Class={`textbox ${errors && errors.message && 'error'}`}
+                                            value={message}
+                                            ChangeValue={setMessage}
                                         />
                                     </FormGroup>
                                 </Form>
@@ -122,10 +120,9 @@ class Contact extends React.Component {
                             <Button
                                 Class="button1 btn button2 gradient-color"
                                 Name="Deliver your message"
-                                Clickble={event => this.handleSubmit(event)}
+                                Clickble={handleSubmit}
                                 BtnIcon="btn-icon"
                             />
-                            {this.state.feedbackMsg && <p>{this.state.feedbackMsg}</p>}
                         </div>
                     </Col>
                     <Col sm={0} md={2}>
@@ -137,7 +134,6 @@ class Contact extends React.Component {
             </Container>
         </section>
     );
-}
 }
 
 export default Contact;
