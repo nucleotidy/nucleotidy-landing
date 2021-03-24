@@ -16,6 +16,7 @@ import '../contact/contact.scss';
 function Contact() {
 
     const [state, setState] = useState({});
+    const [messagesent, setMessagesent] = useState(false);
 
     const encode = data => {
       return Object.keys(data)
@@ -23,24 +24,25 @@ function Contact() {
         .join("&");
     };
 
-
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value })
+    setMessagesent(false)
   }
 
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
+        const form = e.target
         fetch('/', {
            method: 'POST',
            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
            body: encode({
-             'Form-name': Form.getAttribute('name'),
+             'form-name': form.getAttribute('name'),
              ...state,
            }),
          })
-           .then(() => navigate(Form.getAttribute('action')))
+           .then(() =>  setMessagesent(true))
+           //navigate(form.getAttribute('action')))
            .catch((error) => alert(error))
 
         }
@@ -78,8 +80,8 @@ function Contact() {
                             /> */}
                             <div className="form">
                                 <Form name="contact"
-                                  method="post"
-                                  action="/thanks/"
+                                  method="Post"
+                                  action="#contact"
                                   data-netlify="true"
                                   data-netlify-honeypot="bot-field"
                                   onSubmit={handleSubmit}
@@ -119,15 +121,20 @@ function Contact() {
                                             PlaceHolder="CCACCTTCCCCTCCTCCGGCTTTTTCCTCCCAACTCGGGGAGGTCCTTCCCGGTGGCCGCCCTGACGAGGTCTGAGCACCTAGGCGGAGGCGGCGCAGGCTTTTTGTAGTGAGGTTTGCGCCTGCGCAGCGCGCCTGCCTCCGCCATGCACGGGGGTGGCCCCCCCTCGGGGGACAGCGCATGCCCGCTGCGCACCATCAAGAGAGT..."
                                         />
                                     </FormGroup>
+                                   <FormGroup>
+                                    <Button
+                                        Class="button1 btn button2 gradient-color"
+                                        Name="Deliver your message"
+                                        Type="submit"
+                                        Clickble={handleSubmit}
+                                        BtnIcon="btn-icon"
+                                    />
+                                    {messagesent && (
+                                      <p style={{ color: "green" }}>Thanks for your message! </p>
+                                    )}
+                                  </FormGroup>
                                 </Form>
                             </div>
-                            <Button
-                                Class="button1 btn button2 gradient-color"
-                                Name="Deliver your message"
-                                type="submit"
-                                Clickble={handleSubmit}
-                                BtnIcon="btn-icon"
-                            />
                         </div>
                     </Col>
                     <Col sm={0} md={2}>
