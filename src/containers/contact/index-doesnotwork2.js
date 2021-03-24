@@ -15,6 +15,10 @@ import '../contact/contact.scss';
 
 function Contact() {
 
+    const [sender, setSender] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [errors, setErrors] = useState({});
     const [state, setState] = useState({});
 
     const encode = data => {
@@ -32,6 +36,21 @@ function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault()
 
+        const error = {}
+        if (!sender) {
+            error.sender = 'First Name field shouldn’t be empty';
+        }
+        if (!email) {
+            error.email = 'Email field shouldn’t be empty';
+        }
+        if (!message) {
+            error.message = 'Message field shouldn’t be empty';
+        }
+
+        if (error) {
+            setErrors(error)
+        } else {
+
         fetch('/', {
            method: 'POST',
            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -43,7 +62,11 @@ function Contact() {
            .then(() => navigate(Form.getAttribute('action')))
            .catch((error) => alert(error))
 
+            setSender('');
+            setEmail('');
+            setMessage('');
         }
+    }
 
     return (
         <section className="contact-wrapper" id="contact">
@@ -98,7 +121,10 @@ function Contact() {
                                             Type="text"
                                             Name="sender"
                                             PlaceHolder="Har Gobind Khorana"
+                                            value={sender}
                                             onChange={handleChange}
+                                            ChangeValue={setSender}
+                                            Class={errors && errors.sender && 'error'}
                                         />
                                     </FormGroup>
                                     <FormGroup>
@@ -107,7 +133,10 @@ function Contact() {
                                             Type="text"
                                             Name="email"
                                             PlaceHolder="khorana@uag.rna"
+                                            value={email}
                                             onChange={handleChange}
+                                            ChangeValue={setEmail}
+                                            Class={errors && errors.email && 'error'}
                                         />
                                     </FormGroup>
                                     <FormGroup>
@@ -117,6 +146,9 @@ function Contact() {
                                             Name="text"
                                             onChange={handleChange}
                                             PlaceHolder="CCACCTTCCCCTCCTCCGGCTTTTTCCTCCCAACTCGGGGAGGTCCTTCCCGGTGGCCGCCCTGACGAGGTCTGAGCACCTAGGCGGAGGCGGCGCAGGCTTTTTGTAGTGAGGTTTGCGCCTGCGCAGCGCGCCTGCCTCCGCCATGCACGGGGGTGGCCCCCCCTCGGGGGACAGCGCATGCCCGCTGCGCACCATCAAGAGAGT..."
+                                            Class={`textbox ${errors && errors.message && 'error'}`}
+                                            value={message}
+                                            ChangeValue={setMessage}
                                         />
                                     </FormGroup>
                                 </Form>
