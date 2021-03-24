@@ -81,7 +81,7 @@ function Contact() {
                             <div className="form">
                                 <Form name="contact"
                                   method="Post"
-                                  action="#contact"
+                                  //action="#contact"
                                   data-netlify="true"
                                   data-netlify-honeypot="bot-field"
                                   onSubmit={handleSubmit}
