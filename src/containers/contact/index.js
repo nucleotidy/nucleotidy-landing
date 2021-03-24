@@ -7,8 +7,8 @@ import { Subtitle, Title } from '../../components/title/index';
 import InputBox from '../../components/input/index';
 import Button from '../../components/button';
 //import ContactBackgroundImages from '../../data/contact';
-import SketchWrapper from '../../components/ssrP5/index';
-import sketch from '../../assets/animations/p5/contactmessages.js';
+//import SketchWrapper from '../../components/ssrP5/index';
+//import sketch from '../../assets/animations/p5/contactmessages.js';
 import '../contact/contact.scss';
 
 // https://github.com/sw-yx/gatsby-netlify-form-example-v2/blob/master/src/pages/contact.js
@@ -58,7 +58,8 @@ function Contact() {
                 <Row>
                     <Col sm={0} md={2}>
                       <div className="contact-left">
-                            <SketchWrapper sketch={sketch} />
+                            <br />
+                                {/* <SketchWrapper sketch={sketch} /> */}
                             {/* <Img fluid={data.placeholderImage.childImageSharp.fluid} />
                             <Image Path={ContactImg} Class="logo-img" />*/}
                        </div>
