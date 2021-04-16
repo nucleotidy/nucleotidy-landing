@@ -9,8 +9,8 @@ import { Subtitle, Title } from '../../components/title/index';
 import InputBox from '../../components/input/index';
 import Button from '../../components/button';
 //import ContactBackgroundImages from '../../data/contact';
-import SketchWrapper from '../../components/ssrP5/index';
-import sketch from '../../assets/animations/p5/contactmessages.js';
+//import SketchWrapper from '../../components/ssrP5/index';
+//import sketch from '../../assets/animations/p5/contactmessages.js';
 import '../contact/contact.scss';
 
 class Contact extends React.Component {
