@@ -116,15 +116,16 @@ class Contact extends React.Component {
                                             PlaceHolder="CCACCTTCCCCTCCTCCGGCTTTTTCCTCCCAACTCGGGGAGGTCCTTCCCGGTGGCCGCCCTGACGAGGTCTGAGCACCTAGGCGGAGGCGGCGCAGGCTTTTTGTAGTGAGGTTTGCGCCTGCGCAGCGCGCCTGCCTCCGCCATGCACGGGGGTGGCCCCCCCTCGGGGGACAGCGCATGCCCGCTGCGCACCATCAAGAGAGT..."
                                         />
                                     </FormGroup>
+                                    <Button
+                                        Class="button1 btn button2 gradient-color"
+                                        Name="Deliver your message"
+                                        Type="submit"
+                                        Clickble={event => this.handleSubmit(event)}
+                                        BtnIcon="btn-icon"
+                                    />
+                                    {this.state.feedbackMsg && <p>{this.state.feedbackMsg}</p>}
                                 </Form>
                             </div>
-                            <Button
-                                Class="button1 btn button2 gradient-color"
-                                Name="Deliver your message"
-                                Clickble={event => this.handleSubmit(event)}
-                                BtnIcon="btn-icon"
-                            />
-                            {this.state.feedbackMsg && <p>{this.state.feedbackMsg}</p>}
                         </div>
                     </Col>
                     <Col sm={0} md={2}>
