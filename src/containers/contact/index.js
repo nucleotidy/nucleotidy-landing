@@ -83,8 +83,8 @@ function Contact() {
                 <Row>
                     <Col sm={0} md={2}>
                       <div className="contact-left">
-                            <SketchWrapper sketch={sketch} />
-                            {/* <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+                            {/*  <SketchWrapper sketch={sketch} />
+                            <Img fluid={data.placeholderImage.childImageSharp.fluid} />
                             <Image Path={ContactImg} Class="logo-img" />*/}
                        </div>
                     </Col>
