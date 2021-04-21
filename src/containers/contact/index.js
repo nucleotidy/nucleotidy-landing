@@ -21,7 +21,7 @@ function Contact() {
     const [errors, setErrors] = useState({})
     const [state, setState] = useState({})
 
-    this.ContactForm = React.createRef()
+    const ContactForm = React.createRef()
 
     const encode = data => {
       return Object.keys(data)
@@ -38,7 +38,7 @@ function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        const contactform = this.ContactForm.current
+        const contactform = ContactForm.current
 
         const error = {}
         if (!sender) {
@@ -58,7 +58,7 @@ function Contact() {
         fetch('/', {
            method: 'POST',
            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-           body: this.encode({
+           body: encode({
              'Form-name': contactform.getAttribute('name'),
              ...state,
            }),
