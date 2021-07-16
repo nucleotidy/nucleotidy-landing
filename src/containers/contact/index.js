@@ -21,12 +21,14 @@ function Contact() {
     const [errors, setErrors] = useState({})
     const [state, setState] = useState({})
 
-    const ContactForm = React.createRef()
+    //const ContactForm = React.createRef()
 
     const encode = data => {
-      return Object.keys(data)
+      var output = Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
+        console.log(output);
+        return(output);
     };
 
 
@@ -38,7 +40,7 @@ function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        const contactform = ContactForm.current
+        //const contactform = ContactForm.current
 
         const error = {}
         if (!sender) {
@@ -51,26 +53,41 @@ function Contact() {
             error.message = 'Message field shouldn’t be empty';
         }
 
-        if (error) {
-            setErrors(error)
-        } else {
+        //if (error) {
+          //  setErrors(error)
+        //} else {
 
-        fetch('/', {
+        /* fetch('/', {
            method: 'POST',
            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
            body: encode({
-             'Form-name': contactform.getAttribute('name'),
+             'Form-name': Form.getAttribute('name'),
              ...state,
            }),
          })
-           .then(() => navigate(contactform.getAttribute('action')))
+
+           .then(() => navigate(Form.getAttribute('action')))
            .catch((error) => alert(error))
 
             setSender('');
             setEmail('');
             setMessage('');
-        }
+        //} */
+
+        e.preventDefault();
+
+        let myForm = document.getElementById('contact');
+        let formData = new FormData(myForm)
+
+         fetch('/', {
+           method: 'POST',
+           headers: { "Content-Type": "application/x-www-form-urlencoded" },
+           body: new URLSearchParams(formData).toString()
+         }).then(() => console.log('Form successfully submitted')).catch((error) =>
+           alert(error))
+
     }
+
 
     return (
         <section className="contact-wrapper" id="contact">
@@ -105,17 +122,18 @@ function Contact() {
                             /> */}
                             <div className="form">
                                 <Form name="contact"
+                                  id="contact"
                                   method="post"
                                   action="/thanks/"
                                   data-netlify="true"
                                   data-netlify-honeypot="bot-field"
-                                  onSubmit={handleSubmit}
+                                  onSubmit={(e) => handleSubmit(e)}
                                   >
                                   <FormGroup>
                                   <input type="hidden" name="form-name" value="contact" />
                                      <p hidden>
                                        <label>
-                                         Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+                                         Don’t fill this out: <input name="bot-field" onChange={(e) => handleChange(e)} />
                                        </label>
                                      </p>
                                     </FormGroup>
@@ -126,7 +144,7 @@ function Contact() {
                                             Name="sender"
                                             PlaceHolder="Har Gobind Khorana"
                                             value={sender}
-                                            onChange={handleChange}
+                                            onChange={(e) => handleChange(e)}
                                             ChangeValue={setSender}
                                             Class={errors && errors.sender && 'error'}
                                         />
@@ -138,7 +156,7 @@ function Contact() {
                                             Name="email"
                                             PlaceHolder="khorana@uag.rna"
                                             value={email}
-                                            onChange={handleChange}
+                                            onChange={(e) => handleChange(e)}
                                             ChangeValue={setEmail}
                                             Class={errors && errors.email && 'error'}
                                         />
@@ -148,22 +166,22 @@ function Contact() {
                                         <InputBox
                                             Type="textarea"
                                             Name="text"
-                                            onChange={handleChange}
+                                            onChange={(e) => handleChange(e)}
                                             PlaceHolder="CCACCTTCCCCTCCTCCGGCTTTTTCCTCCCAACTCGGGGAGGTCCTTCCCGGTGGCCGCCCTGACGAGGTCTGAGCACCTAGGCGGAGGCGGCGCAGGCTTTTTGTAGTGAGGTTTGCGCCTGCGCAGCGCGCCTGCCTCCGCCATGCACGGGGGTGGCCCCCCCTCGGGGGACAGCGCATGCCCGCTGCGCACCATCAAGAGAGT..."
                                             Class={`textbox ${errors && errors.message && 'error'}`}
                                             value={message}
                                             ChangeValue={setMessage}
                                         />
                                     </FormGroup>
+                                    <Button
+                                        Class="button1 btn button2 gradient-color"
+                                        Name="Deliver your message"
+                                        type="submit"
+                                        //Clickble={(e) => handleSubmit(e)}
+                                        BtnIcon="btn-icon"
+                                    />
                                 </Form>
                             </div>
-                            <Button
-                                Class="button1 btn button2 gradient-color"
-                                Name="Deliver your message"
-                                type="submit"
-                                Clickble={handleSubmit}
-                                BtnIcon="btn-icon"
-                            />
                         </div>
                     </Col>
                     <Col sm={0} md={2}>
